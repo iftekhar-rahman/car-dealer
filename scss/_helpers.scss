@@ -1,0 +1,85 @@
+/*****************************
+02. Helper CSS
+*****************************/
+
+
+// %imagezommin{
+// 	@include transform(scale3d(1.05, 1.05, 1.05));
+// }
+%posabsolute{
+	position: absolute;
+}
+%pseudoabsolute{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+%pseudo{
+	position: absolute;
+	content: "";
+}
+%posrelative{
+	position: relative;
+}
+%basetransition{
+	@include transition(all .3s ease-in);
+}
+// %absCenter{
+// 	left: 50%;
+// 	top: 50%;
+// 	@include transform(translate(-50%, -50%));
+// }
+// %basetransition{
+// 	@include transition(all .3s ease-in);
+// }
+%invisible{
+	visibility: hidden;
+	opacity: 0;
+}
+%visible{
+	visibility: visible;
+	opacity: 1;
+}
+%inlineblock{
+	display: inline-block;
+}
+%uppercase{
+	text-transform: uppercase;
+}
+
+// Fonts
+%body-font{
+	font-family: $body-font;
+}
+
+
+
+
+// %brand-color{
+// 	color: $brand-color;
+// }
+// %brand-bg-color{
+// 	background-color: $brand-color;
+// }
+// %brand-border-color{
+// 	border-color: $brand-color;
+// }
+%roundicon{
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	text-align: center;
+	display: inline-block;
+}
+
+
+%fontAwesome{
+	position: absolute;
+	font-family: fontAwesome;
+	line-height: 1;
+}
+

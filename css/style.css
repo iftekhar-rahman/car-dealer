@@ -1,0 +1,434 @@
+/*
+    Template Name: Lazio
+    Author: HasTech
+    Description: Multipurpose eCommerce Bootstrap 4 Template
+    Version: 1.0
+*/
+/******************************
+
+INDEX:
+
+    00 - Base - Global
+    01 - Base - Typography
+    02 - Base - Helpers
+    03 - Base - Colors
+
+    10 - Layout - Header
+    11 - Layout - Footer
+    12 - Layout - Sidebar
+
+    20 - Components - Navigation
+    21 - Components - Mini Cart
+    22 - Components - Button
+    23 - Components - Slider
+    24 - Components - Form
+    25 - Components - Product
+    26 - Components - Modal
+    27 - Components - Carousel
+    28 - Components - Social Icon
+    29 - Components - Tabs
+    30 - Components - Promo CSS
+    31 - Components - Accordion
+    32 - Components - Progress Bar
+    33 - Components - Post
+    34 - Components - Table
+    35 - Components - Comment
+    36 - Components - Animation
+
+    40 - Pages - About
+    41 - Pages - 404 
+    42 - Pages - Shop
+    43 - Pages - Single Product
+    44 - Pages - Checkout
+    45 - Pages - Cart
+
+******************************/
+/*
+    Defult Primary Color:       #fb9935
+    Default Border Color:       #e5e5e5
+    Default Text Color:         #999999
+    Default Heading Color:      #333333
+    Default Body Font:          'Quicksand', sans-serif;
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+/*****************************
+00. Global CSS
+******************************/
+/*****************************
+00. Common CSS
+******************************/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif; }
+
+p {
+  font-size: 14px;
+  font-weight: 400; }
+  p:last-child {
+    margin-bottom: 0; }
+
+input[type="submit"], button[type="submit"] {
+  cursor: pointer; }
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+  background-color: #0DA0F4;
+  color: #fff; }
+
+.section-title {
+  color: #363636; }
+
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+/*
+======.owl-dots customization=======
+*/
+.owl-dots div {
+  height: 5px;
+  width: 5px;
+  background-color: #BBBBBB;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%; }
+
+.owl-dots {
+  text-align: center; }
+
+.owl-dots div.active {
+  background-color: #0DA0F4; }
+
+/*
+=====owl nav customization======
+*/
+.owl-nav div {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  color: #ADADAD;
+  font-size: 50px;
+  line-height: 60px;
+  margin-top: -35px; }
+
+.owl-nav div.owl-next {
+  left: auto;
+  right: 0px; }
+
+.owl-nav div:hover {
+  color: #0DA0F4; }
+
+select {
+  font-size: 19px;
+  color: #0da0f4;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 0;
+  padding: 8px 10px; }
+
+/*****************************
+00. Reset CSS
+******************************/
+img {
+  max-width: 100%;
+  height: auto; }
+
+a, a:hover, a:focus, a:active, button, button:focus,
+input, input:focus, select, textarea, textarea:focus, .slick-slide, .slick-slide:focus, .slick-slide:active {
+  outline: 0 solid; }
+
+::selection {
+  background: #90B1C3;
+  color: #fff; }
+
+::-moz-selection {
+  background: #90B1C3;
+  color: #fff; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a, button {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+*:focus {
+  outline: none !important; }
+
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+button, input[type="submit"] {
+  cursor: pointer; }
+
+/*****************************
+03. Color CSS
+*****************************/
+.primary-bg {
+  background-color: #db2d2e; }
+
+.mainmenu ul li a {
+  color: #323232; }
+
+.header-top-area {
+  background-color: #323232; }
+
+.boxed-btn, .boxed-btn:hover, .header-top-area {
+  color: #ffffff; }
+
+.single-slider h2, .single-slider h3 {
+  color: #000000; }
+
+p {
+  color: #999999; }
+
+.color--primary {
+  color: #db2d2e !important; }
+
+.color--light {
+  color: #999999 !important; }
+
+.color--black {
+  color: #000000 !important; }
+
+.color--white {
+  color: #ffffff !important; }
+
+.color--dark {
+  color: #333333 !important; }
+
+.color--dark-1 {
+  color: #444444 !important; }
+
+.color--dark-2 {
+  color: #323e52 !important; }
+
+.color--dark-3 {
+  color: #2e2e2e !important; }
+
+.color--dark-4 {
+  color: #212121 !important; }
+
+.bg--1 {
+  background-color: #000000; }
+
+.bg--white {
+  background-color: #ffffff; }
+
+.bg--white-dark {
+  background-color: #f6f6f6; }
+
+.bg--light {
+  background-color: #999999; }
+
+.bg--dark {
+  background-color: #333333; }
+
+.bg--dark-2 {
+  background-color: #323e52; }
+
+.bg--dark-3 {
+  background-color: #2e2e2e; }
+
+.bg--dark-4 {
+  background-color: #212121; }
+
+.bg--dark-5 {
+  background-color: #1d1d1d; }
+
+.bg--black {
+  background-color: #000000; }
+
+.bg--shaft {
+  background-color: #000000; }
+
+.bg--blue {
+  background-color: #2874f0; }
+
+.bg--gray {
+  background-color: #f5f5f5; }
+
+.bg--gray-2 {
+  background-color: #F3F4F8; }
+
+.bg--gray-3 {
+  background-color: #b5b5b5; }
+
+.bg--gray-4 {
+  background-color: #e8e8e8; }
+
+.bg--dark {
+  background-color: #333333; }
+
+.bg--dark-2 {
+  background-color: #323e52; }
+
+.bg--dark-3 {
+  background-color: #2e2e2e; }
+
+.bg--dark-4 {
+  background-color: #212121; }
+
+.bg--zircon-light {
+  background-color: #f2f2f2; }
+
+.yellow-dark-bg {
+  background-color: #e0b70e; }
+
+.green-dark-bg {
+  background-color: #1f4244; }
+
+/*****************************
+02. Helper CSS
+*****************************/
+.boxed-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1; }
+
+.boxed-btn {
+  position: relative; }
+
+a, button, img, input, span, .boxed-btn:after {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+
+.mainmenu ul li, .mainmenu ul li a {
+  display: inline-block; }
+
+.mainmenu ul li a {
+  text-transform: uppercase; }
+
+.boxed-btn, .single-slider h2 {
+  font-family: "Open Sans", sans-serif; }
+
+/*****************************
+22. Button CSS
+*****************************/
+.boxed-btn {
+  background-color: #DB2D2E;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 17px;
+  border: 0;
+  z-index: 2;
+  text-transform: capitalize; }
+  .boxed-btn:after {
+    background-color: #323232;
+    transform: scaleY(0); }
+  .boxed-btn:hover:after {
+    transform: scaleY(1); }
+
+/*****************************
+02. Header CSS
+*****************************/
+.header-top-area {
+  padding: 10px 0; }
+
+.header-top-left ul li {
+  display: inline-block;
+  margin-right: 10px; }
+.header-top-left ul li i.fa {
+  margin-right: 5px; }
+
+.header-top-right ul li {
+  display: inline-block;
+  margin-left: 14px; }
+  .header-top-right ul li:hover a {
+    color: #DB2D2E; }
+  .header-top-right ul li:first-child i.fa {
+    margin-right: 5px; }
+
+.logo {
+  margin: 33px 0; }
+  .logo img {
+    max-height: 36px; }
+
+.mainmenu ul li a {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 39px 10px; }
+
+.slide-1 {
+  background-image: url(../img/pexels-photo-259280.jpeg); }
+
+.slide-2 {
+  background-image: url(../img/pexels-photo-259280.jpeg); }
+
+.single-slider {
+  background-size: cover;
+  background-position: center;
+  height: 490px;
+  width: 100%;
+  padding-bottom: 40px; }
+  .single-slider h2 {
+    font-size: 63px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 63px;
+    margin-bottom: 25px; }
+    .single-slider h2 span {
+      font-size: 44px;
+      line-height: 44px; }
+  .single-slider h3 {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 300;
+    font-style: italic; }
+  .single-slider .d-table-cell {
+    vertical-align: bottom; }
+
+/*****************************
+00. Footer CSS
+******************************/
+.single-box-item {
+  padding: 100px 50px; }
+
+.box-1 {
+  background-color: #AF2425; }
+
+.box-2 {
+  background-color: #C52829; }
+
+.box-3 {
+  background-color: #DB2D2E; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+/*****************************
+02. Header CSS
+*****************************/
+
+.header-top-area {
+    @extend %secondary-bg-color;
+    @extend %white-color;
+    padding: 10px 0;
+}
+.header-top-left ul{
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    li i.fa {
+        margin-right: 5px;
+    }
+}
+.header-top-right ul{
+    li {
+        display: inline-block;
+        margin-left: 14px;
+        &:hover a {
+            color: #DB2D2E;
+        }
+        &:first-child i.fa {
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+
+
+
+.logo {
+    margin: 33px 0;
+    img {
+        max-height: 36px;
+    }
+}
+.mainmenu ul li {
+    @extend %inlineblock;
+    a {
+        @extend %inlineblock;
+        @extend %secondary-color;
+        font-weight: 500;
+        font-size: 14px;
+        @extend %uppercase;
+        padding: 39px 10px;
+    }
+}
+
+
+
+.slide-1{background-image: url(../img/pexels-photo-259280.jpeg)}
+.slide-2{background-image: url(../img/pexels-photo-259280.jpeg)}
+.single-slider {
+    background-size: cover;
+    background-position: center;
+    height: 490px;
+    width: 100%;
+    padding-bottom: 40px;
+    h2 {
+        font-size: 63px;
+        font-weight: 300;
+        @extend %black-color;
+        font-style: italic;
+        @extend %body-font;
+        line-height: 63px;
+        margin-bottom: 25px;
+        span {
+            font-size: 44px;
+            line-height: 44px;
+        }
+    }
+    h3 {
+        @extend %black-color;
+        font-size: 25px;
+        line-height: 25px;
+        font-weight: 300;
+        font-style: italic;
+    }
+    .d-table-cell {
+        vertical-align: bottom;
+    }
+}
+
+
