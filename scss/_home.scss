@@ -1,0 +1,71 @@
+/*****************************
+03. Home CSS
+*****************************/
+
+/*============== .box-section-area  ================*/
+.box-section-area .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.single-box-item {
+    padding: 100px 50px;
+    color: #fff;
+    .icon{
+        @extend %dtablecell;
+    }
+    .box-text{
+        @extend %dtablecell;
+    }
+    h3 {
+        font-size: 18px;
+        @extend %uppercase;
+    }
+    .boxed-btn {
+        margin-top: 20px;
+        background-color: #323232;
+        &:after {
+            background-color: #fff;
+        }
+        &:hover {
+            color: #DB2D2E;
+        }
+    }
+}
+.box-1{
+    background-color: #AF2425;
+}
+.box-2{
+    background-color: #C52829;
+}
+.box-3{
+    background-color: #DB2D2E   ;
+}
+.icon {
+    padding-right: 20px;
+    i.fa {
+        font-size: 20px;
+    }
+}
+
+
+/*============== .about-area =================*/
+.about-area{
+    padding: 70px 0;
+}
+.about-text-wrap{
+    padding: 20px 0;
+}
+.single-about-item{
+    .icon{
+        @extend %dtablecell;
+        color: $primary-color;
+    }
+    .about-text{
+        @extend %dtablecell;
+    }
+    h3{
+        color: $secondary-color;
+        font-size: 20px;
+        @extend %uppercase;
+    }
+}
