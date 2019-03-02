@@ -69,3 +69,117 @@
         @extend %uppercase;
     }
 }
+
+/*============.search-area=================*/ 
+.search-bg{background-image: url(../img/slide-bg-2.jpg);}
+.search-area {
+    @extend %sectionpadding;
+    @extend %backgroundimage;
+    @extend %posrelative;
+    @extend %zindex2;
+    &:after{
+        @extend %pseudoabsolute;
+        @extend %black-bg-color;
+        @extend %opacity7;
+    }
+    .section-title{
+        margin-bottom: 50px;
+        @extend %white-color;
+        @extend %uppercase;
+    }
+    .single-search-item {
+        margin-top: 5px;
+    }
+    .single-search-item .nice-select {
+        margin-bottom: 30px;
+        @extend %w100;
+        ul {
+            @extend %w100;
+        }
+    }
+
+}
+
+/*=================.feature-area=======================*/ 
+.feature-area{
+    @extend %sectionpadding;
+    .section-title{
+        margin-bottom: 50px;
+    }
+}
+.feature-img {
+    position: relative;
+    overflow: hidden;
+}
+.feature-overlay {
+    position: absolute;
+    left: 0;
+    top: -190px;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: .3s;
+}
+.feature-overlay ul li a {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    display: block;
+    border-radius: 50%;
+    line-height: 31px;
+    margin: 0 3px;
+}
+.feature-overlay ul {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.feature-overlay:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    content: "";
+    z-index: -1;
+    opacity: .7;
+}
+.car-features {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    z-index: 3;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    transition: .3s;
+}
+.car-features ul li {
+    display: inline-block;
+    margin: 0 7px;
+}
+.single-feature-item:hover .feature-overlay {
+    top: 0;
+}
+.single-feature-item:hover .car-features {
+    bottom: 0;
+}
+.feature-content {
+    text-align: center;
+    padding: 10px;
+}
+.star-icons i.fa {
+    margin: 0 2px;
+}
+.feature-content a {
+    color: #DB2D2E;
+    font-size: 20px;
+    font-weight: 600;
+}

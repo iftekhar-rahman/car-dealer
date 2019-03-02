@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-  
+    $('select').niceSelect();
 
     // homepage-slides
 	$(".homepage-slides").owlCarousel({
@@ -14,19 +14,19 @@ jQuery(document).ready(function($){
 
     
 
-    $("#range_49").ionRangeSlider({
-        type: "single",
-        min: 150,
-        max: 250,
-        from: 200,
-        to: 250,
-        prefix: "£",
-        step: 1,
-        onFinish: function(data) {
-            maxValue = data.from;
-            alert("Your Value: " + maxValue);
-        }
-    });
+    // $("#range_49").ionRangeSlider({
+    //     type: "single",
+    //     min: 150,
+    //     max: 250,
+    //     from: 200,
+    //     to: 250,
+    //     prefix: "£",
+    //     step: 1,
+    //     onFinish: function(data) {
+    //         maxValue = data.from;
+    //         alert("Your Value: " + maxValue);
+    //     }
+    // });
 
 
     $(".logo-carousel-wrap").owlCarousel({
@@ -101,12 +101,12 @@ jQuery(document).ready(function($){
 
 
 
-	$(".bodytype-carousel-wrap").magnificPopup({
-		type: 'image',
-        gallery: {
-            enabled: true
-        }
-	});
+	// $(".bodytype-carousel-wrap").magnificPopup({
+	// 	type: 'image',
+    //     gallery: {
+    //         enabled: true
+    //     }
+	// });
 
 
 
