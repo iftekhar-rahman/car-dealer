@@ -9,8 +9,21 @@
 %sectionpadding{
 	padding: 70px;
 }
+%margin0auto{
+	margin: 0 auto;
+	display: block;
+}
+%displayblock{
+	display: block;
+}
+%displayinline{
+	display: inline-block;
+}
 %dtablecell{
 	display: table-cell;
+}
+%posrelative{
+	position: relative;
 }
 %posabsolute{
 	position: absolute;
@@ -35,9 +48,6 @@
 %pseudo{
 	position: absolute;
 	content: "";
-}
-%posrelative{
-	position: relative;
 }
 %basetransition{
 	@include transition(all .3s ease-in);
@@ -69,6 +79,18 @@
 }
 %w100{
 	width: 100%;
+}
+%h100{
+	height: 100%;
+}
+%overflowhidden{
+	overflow: hidden;
+}
+%textcenter{
+	text-align: center;
+}
+%borderradius50{
+	border-radius: 50%;
 }
 
 // Fonts
