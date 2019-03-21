@@ -212,17 +212,14 @@
     @extend %textcenter;
     // transform: translateY(-50%);
     @include transform(translateY(-50%));
-    width: 90px;
-    height: 90px;
-    border: 2px solid $color-white;
+    @include roundy(90px, 2px solid $color-white);
     @extend %borderradius50;
     @extend %margin0auto;
     padding: 8px;
     cursor: pointer;
 }
 .welcome-video .video-icon i.fa {
-    width: 70px;
-    height: 70px;
+    @include roundy(70px);
     @extend %white-bg-color;
     @extend %primary-color;
     @extend %borderradius50;
@@ -232,11 +229,134 @@
 .welcome-text {
     @extend %white-color;
 }
+.video-icon:hover i.fa {
+    background-color: #000;
+}
 
 /*================.latest-blog-area=======================*/ 
 .latest-blog-area{
     @extend %sectionpadding;
     .section-title{
         margin-bottom: 50px;
+        text-align: center;
     }
 }
+.blog-img {
+    @extend %posrelative;
+}
+.blog-img .blog-date {
+    @extend %posabsolute;
+    left: 10px;
+    top: 10px;
+    @extend %primary-bg-color;
+    @extend %white-color;
+    @extend %displayblock;
+    @extend %uppercase;
+    padding: 8px 20px;
+    font-weight: 600;
+}
+ul.blog-social-icons {
+    @extend %posabsolute;
+    left: 6px;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    @extend %basetransition;
+}
+.blog-admin-meta ul li {
+    @extend %displayinline;
+    border-left: 1px solid #ddd;
+    @extend %posrelative;
+}
+.blog-admin-wrap {
+    @include flexbox;
+    @include justify-content(space-between);
+    border-bottom: 1px solid #ddd;
+}
+.blog-admin-meta ul li a {
+    @extend %primary-color;
+    @extend %textcenter;
+    padding: 10px 15px;
+}
+ul.blog-social-icons li {
+    border: 0;
+}
+ul.blog-social-icons li a {
+    @include roundy(30px);
+    @extend %primary-bg-color;
+    color: #fff !important;
+    padding: 4px;
+    margin-top: 5px;
+}
+ul.blog-social-icons li a i.fa {
+    text-align: center;
+}
+.blog-admin-meta ul li:nth-child(2):hover ul.blog-social-icons {
+    @extend %visible;
+    bottom: 68px;
+}
+.blog-text {
+    text-align: center;
+    padding: 20px;
+}
+.blog-text h3 {
+    font-size: 18px;
+}
+.latest-blog-area {
+    background-color: #F6F6F6;
+}
+.blog-content {
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 9;
+    top: -25px;
+}
+.blog-admin img {
+    @include roundy(50px);
+    margin-right: 5px;
+}
+
+.blog-admin {
+    margin: 8px 0px 0 10px;
+}
+
+/*=================.logo-carousel-area====================*/ 
+.logo-carousel-area{
+    @extend %sectionpadding;
+}
+
+
+/*==================.footer-widget-area======================*/ 
+.footer-widget-bg{background-image: url(../img/slide-bg-2.jpg)}
+.footer-widget-area{
+    @extend %backgroundimage;
+    @extend %zindex2;
+    @extend %posrelative;
+    &:after{
+        @extend %pseudoabsolute;
+        background-color: #000;
+        opacity: 0.9;
+    }
+}
+.footer-social-icons ul li {
+    width: px-to-pc(185px, 1110px);
+}
+.footer-social-icons ul {
+    display: flex;
+    margin-bottom: 80px;
+}
+.footer-social-icons ul li a {
+    color: #fff;
+    padding: 20px 15px;
+    text-transform: uppercase;
+    @extend %basetransition;
+    display: block;
+}
+.footer-social-icons ul li a i.fa {
+    padding-left: 32px;
+}
+.footer-social-icons ul li:hover a{
+    @extend %primary-bg-color;
+} 

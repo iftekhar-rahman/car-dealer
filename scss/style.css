@@ -58,34 +58,37 @@ INDEX:
 /*****************************
 02. Helper CSS
 *****************************/
-.search-area, .feature-area, .welcome-area, .latest-blog-area {
+.feature-overlay ul li a, .welcome-video .video-icon, .welcome-video .video-icon i.fa {
+  border-radius: 50%; }
+
+.search-area, .feature-area, .welcome-area, .latest-blog-area, .logo-carousel-area {
   padding: 70px; }
 
 .welcome-video .video-icon {
   margin: 0 auto;
   display: block; }
 
-.feature-overlay ul li a {
+.feature-overlay ul li a, .blog-img .blog-date {
   display: block; }
 
-.car-features ul li {
+.car-features ul li, .blog-admin-meta ul li {
   display: inline-block; }
 
 .single-box-item .icon, .single-box-item .box-text, .single-about-item .icon, .single-about-item .about-text {
   display: table-cell; }
 
-.boxed-btn, .search-area, .feature-img, .welcome-area, .welcome-area .welcome-video {
+.boxed-btn, .search-area, .feature-img, .welcome-area, .welcome-area .welcome-video, .blog-img, .blog-admin-meta ul li, .footer-widget-area {
   position: relative; }
 
-.feature-overlay, .car-features, .welcome-video .video-icon {
+.feature-overlay, .car-features, .welcome-video .video-icon, .blog-img .blog-date, ul.blog-social-icons {
   position: absolute; }
 
-.search-area, .welcome-area {
+.search-area, .welcome-area, .footer-widget-area {
   background-size: cover;
   background-position: center;
   background-color: #ddd; }
 
-.boxed-btn:after, .search-area:after, .feature-overlay:after, .welcome-area:after, .welcome-area .welcome-video:after {
+.boxed-btn:after, .search-area:after, .feature-overlay:after, .welcome-area:after, .welcome-area .welcome-video:after, .footer-widget-area:after {
   position: absolute;
   left: 0;
   top: 0;
@@ -94,15 +97,19 @@ INDEX:
   content: "";
   z-index: -1; }
 
-.search-area, .feature-overlay, .welcome-area {
+.search-area, .feature-overlay, .welcome-area, .footer-widget-area {
   z-index: 2; }
 
-a, button, img, input, span, .boxed-btn:after, .feature-overlay, .car-features {
+a, button, img, input, span, .boxed-btn:after, .feature-overlay, .car-features, ul.blog-social-icons, .footer-social-icons ul li a {
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
   -ms-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
+
+.blog-admin-meta ul li:nth-child(2):hover ul.blog-social-icons {
+  visibility: visible;
+  opacity: 1; }
 
 .search-area:after, .feature-overlay:after, .welcome-area:after, .welcome-area .welcome-video:after {
   opacity: 0.7; }
@@ -110,7 +117,7 @@ a, button, img, input, span, .boxed-btn:after, .feature-overlay, .car-features {
 .mainmenu ul li, .mainmenu ul li a {
   display: inline-block; }
 
-.mainmenu ul li a, .single-box-item h3, .single-about-item h3, .search-area .section-title {
+.mainmenu ul li a, .single-box-item h3, .single-about-item h3, .search-area .section-title, .blog-img .blog-date {
   text-transform: uppercase; }
 
 .search-area .single-search-item .nice-select, .search-area .single-search-item .nice-select ul, .feature-overlay, .feature-overlay ul, .car-features {
@@ -122,7 +129,7 @@ a, button, img, input, span, .boxed-btn:after, .feature-overlay, .car-features {
 .feature-img {
   overflow: hidden; }
 
-.feature-overlay, .feature-overlay ul, .car-features, .feature-content, .welcome-video .video-icon {
+.feature-overlay, .feature-overlay ul, .car-features, .feature-content, .welcome-video .video-icon, .blog-admin-meta ul li a {
   text-align: center; }
 
 .feature-overlay ul li a, .welcome-video .video-icon, .welcome-video .video-icon i.fa {
@@ -131,6 +138,9 @@ a, button, img, input, span, .boxed-btn:after, .feature-overlay, .car-features {
 .single-slider h2, .boxed-btn {
   font-family: "Open Sans", sans-serif; }
 
+/*****************************
+02. Function CSS
+*****************************/
 /*****************************
 00. Common CSS
 ******************************/
@@ -477,26 +487,132 @@ button, input[type="submit"] {
   width: 90px;
   height: 90px;
   border: 2px solid #ffffff;
+  border-radius: 50%;
   padding: 8px;
   cursor: pointer; }
 
 .welcome-video .video-icon i.fa {
   width: 70px;
   height: 70px;
+  border-radius: 50%;
   font-size: 20px;
   line-height: 68px; }
 
+.video-icon:hover i.fa {
+  background-color: #000; }
+
 /*================.latest-blog-area=======================*/
 .latest-blog-area .section-title {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  text-align: center; }
+
+.blog-img .blog-date {
+  left: 10px;
+  top: 10px;
+  padding: 8px 20px;
+  font-weight: 600; }
+
+ul.blog-social-icons {
+  left: 6px;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden; }
+
+.blog-admin-meta ul li {
+  border-left: 1px solid #ddd; }
+
+.blog-admin-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd; }
+
+.blog-admin-meta ul li a {
+  padding: 10px 15px; }
+
+ul.blog-social-icons li {
+  border: 0; }
+
+ul.blog-social-icons li a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff !important;
+  padding: 4px;
+  margin-top: 5px; }
+
+ul.blog-social-icons li a i.fa {
+  text-align: center; }
+
+.blog-admin-meta ul li:nth-child(2):hover ul.blog-social-icons {
+  bottom: 68px; }
+
+.blog-text {
+  text-align: center;
+  padding: 20px; }
+
+.blog-text h3 {
+  font-size: 18px; }
+
+.latest-blog-area {
+  background-color: #F6F6F6; }
+
+.blog-content {
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 9;
+  top: -25px; }
+
+.blog-admin img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5px; }
+
+.blog-admin {
+  margin: 8px 0px 0 10px; }
+
+/*=================.logo-carousel-area====================*/
+/*==================.footer-widget-area======================*/
+.footer-widget-bg {
+  background-image: url(../img/slide-bg-2.jpg); }
+
+.footer-widget-area:after {
+  background-color: #000;
+  opacity: 0.9; }
+
+.footer-social-icons ul li {
+  width: 16.6666666667%; }
+
+.footer-social-icons ul {
+  display: flex;
+  margin-bottom: 80px; }
+
+.footer-social-icons ul li a {
+  color: #fff;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  display: block; }
+
+.footer-social-icons ul li a i.fa {
+  padding-left: 32px; }
 
 /*****************************
 03. Color CSS
 *****************************/
-.feature-content a, .welcome-video .video-icon i.fa {
+.feature-content a, .welcome-video .video-icon i.fa, .blog-admin-meta ul li a {
   color: #db2d2e; }
 
-.feature-overlay:after, .welcome-area .welcome-video:after, .primary-bg {
+.feature-overlay:after, .welcome-area .welcome-video:after, .blog-img .blog-date, ul.blog-social-icons li a, .footer-social-icons ul li:hover a, .primary-bg {
   background-color: #db2d2e; }
 
 .mainmenu ul li a {
@@ -505,7 +621,7 @@ button, input[type="submit"] {
 .header-top-area {
   background-color: #323232; }
 
-.header-top-area, .boxed-btn, .boxed-btn:hover, .search-area .section-title, .feature-overlay ul li a, .welcome-text {
+.header-top-area, .boxed-btn, .boxed-btn:hover, .search-area .section-title, .feature-overlay ul li a, .welcome-text, .blog-img .blog-date {
   color: #ffffff; }
 
 .car-features, .welcome-video .video-icon i.fa {

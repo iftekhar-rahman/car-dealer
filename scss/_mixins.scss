@@ -1,4 +1,12 @@
 
+// Rounded elements
+@mixin roundy($dim, $brdr: null){
+	width: $dim;
+	height: $dim;
+	border: $brdr;
+	border-radius: 50%;
+}
+
 
 // Placeholder CSS
 
